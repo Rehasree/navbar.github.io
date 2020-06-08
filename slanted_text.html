@@ -42,8 +42,8 @@
 	  flex-wrap: wrap;
 	  position: fixed;
 	  z-index: 1;
-	  top: 40px;
-	  right: 100px;
+	  top: 20px;
+	  right: 30px;
 	  background: transparent;
 	  cursor: pointer;
 	}
@@ -55,8 +55,9 @@
 	}	
 	.navigation-menu ul li {
 	  list-style: none;
-	  font-family: impact;
-	  font-weight: 300;
+	  font-family:"Times New Roman", Times, serif;
+	  font-weight:bolder;
+	  bottom:80px;
 	  color: hsl(0,0%,70%);
 	}
 	
@@ -153,7 +154,8 @@
 	  color:blue;
 	  font-size: 25px;
 	   font-family:"Times New Roman", Times, serif;
-	  font-weight: 300;
+	  font-weight:bolder;
+	padding-top:20px;
 
  
 	}
@@ -179,16 +181,16 @@
 	}
 	.navigation-menu ul {
 	  position: fixed;
-	 width: 100%;
-	  text-align:left;	
+	 	width: 100%;
+	  text-align:right;	
 	}
 	.navigation-menu ul li {
 	  position: relative;
 	  z-index: 999;
 	  font-size: 25px;
+	  font-weight:bolder;
 	  color: hsl(0,0%,10%);
 	  display:inline;
-	  padding-left:80px;
 	}
 	.navigation-menu ul li  a {
 	  border: none;
@@ -196,10 +198,17 @@
 	  padding:8px;
 	  left:0;
 	}
-
-
-
-	
+	.topnav-right {
+  float: right;
+  padding-top:20px;
+  margin-right:60px;
+}
+.topnav-left {
+  float:left;
+  padding-top:20px;
+  margin-right:60px;
+  margin-left:80px;
+}
 
 }
 	</style>
@@ -215,16 +224,22 @@
     <div id="logo">Reflection</div>
     <div class="navigation-menu">
         <ul>
+        <div class="navbar">
+        <div class="topnav-left">
         	<li class="nav-item">
 	      <a class="nav-link" href="#">Home</a></li>
 		  <li class="nav-item">
 		  <a class="nav-link" href="#">Gallery</a></li>
 		  <li class="nav-item">
 		  <a class="nav-link" href="#">Create</a></li>
+		  </div>
+		  <div class="topnav-right">
 		  <li class="nav-item">
 		  <a class="nav-link" href="#" >Log-In</a></li>
 		  <li class="nav-item">
 		  <a class="nav-link" href="#" >Sign-Up</a></li>
+		</div>
+		</div>
 		</ul>
     </div>
   </div>  
