@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Slanted text</title>
 <link rel="stylesheet" href="../../login%20template/css/common.css" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css/">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css/"/>
 <link rel="stylesheet" href="../../login%20template/css/responsive.css" type="text/css" />
   <style type="text/css">
 @media screen and (max-width: 768px) and (min-width: 320px) {
@@ -50,9 +50,9 @@
 	}
 	.navigation-button .fa {
 	  border: 4px solid white;
-	  border-radius: 3px;
+	  border-radius: 5px;
 	  color: white;
-	  padding:15px;
+	  padding:10px;
 	}	
 	.navigation-menu ul li {
 	  list-style: none;
@@ -68,7 +68,7 @@
 	  top: 0;
 	  right: 0;
 	  width: 50%;
-	  background: #fff;
+	  background:#4682b4;
 	  height: 100%;
 	  transform: skewX(0deg) translate(100%,0);
 	  transform-origin: top right;
@@ -112,7 +112,7 @@
 	  opacity: 1;
 	  transform: translate(0,0);
 	  transition: all .2s ease-in 0s;
-	}
+	  	}
 	.navigation-menu.active li:nth-child(6) {
 	  transition-delay: .3s;
 	}
@@ -130,7 +130,12 @@
 	}
 	.navigation-menu.active li:nth-child(1) {
 	  transition-delay: .8s;
+	  
 	} 
+	#list{
+	color:white;
+}
+
 }
 @media screen and (max-width: 2000px) and (min-width: 769px) {
 	body{
@@ -152,22 +157,19 @@
 	  position:fixed;
 	  top: 15px;
 	  left: 0;
-	  color:blue;
+	  color:white;
 	  font-size: 25px;
-	   font-family:"Times New Roman", Times, serif;
+	  font-family:"Times New Roman", Times, serif;
 	  font-weight:bolder;
-	padding-top:0px;
-
- 
+	  padding-top:0px;
 	}
-
 	  .navigation-wrapper {
 	  position: relative;
 	}
 	.navigation-menu ul li {
 	  list-style: none;
 	  font-family:"Times New Roman", Times, serif;
-	  font-weight: 300;
+	  font-weight:bolder;
 	  color:white;
 	}
 	.navigation-menu {
@@ -176,7 +178,8 @@
 	  top: 0;
 	  right: 0;
 	  width: 100%;
-	  background: #fff;
+	  background:#4682b4;
+	  color:white;
 	  height: 10%;
 	 z-index: -1;
 	}
@@ -184,13 +187,13 @@
 	  position: fixed;
 	 	width: 100%;
 	  text-align:right;	
+	  color:white;
 	}
 	.navigation-menu ul li {
 	  position: relative;
 	  z-index: 999;
 	  font-size: 25px;
 	  font-weight:bolder;
-	  color: hsl(0,0%,10%);
 	  display:inline;
 	}
 	.navigation-menu ul li  a {
@@ -199,16 +202,21 @@
 	  padding:8px;
 	  left:0;
 	}
-	.topnav-right {
-  float: right;
-  padding-top:0px;
-  margin-right:60px;
-}
-.topnav-left {
-  float:left;
-  padding-top:0px;
-  margin-right:60px;
-  margin-left:80px;
+		.topnav-right {
+	  float: right;
+	  padding-top:0px;
+	  margin-right:60px;
+	  color:white;
+	}
+	.topnav-left {
+	  float:left;
+	  padding-top:0px;
+	  margin-right:60px;
+	  margin-left:80px;
+	  color:white;
+	}
+	#list{
+	color:white;
 }
 
 }
@@ -219,7 +227,7 @@
 	<div id="content-mobile" >
     <div class="container">
     <div class="navigation-wrapper">
-    <div class="navigation-button">
+    <div id="button" class="navigation-button">
       <i class="fa fa-bars"></i>
     </div>
     <div id="logo">Reflection</div>
@@ -228,17 +236,17 @@
         <div class="navbar">
         <div class="topnav-left">
         	<li class="nav-item">
-	      <a class="nav-link" href="#">Home</a></li>
+	      <a class="nav-link" id="list" href="#">Home</a></li>
 		  <li class="nav-item">
-		  <a class="nav-link" href="#">Gallery</a></li>
+		  <a class="nav-link" id="list"href="#">Gallery</a></li>
 		  <li class="nav-item">
-		  <a class="nav-link" href="#">Create</a></li>
+		  <a class="nav-link" id="list" href="#">Create</a></li>
 		  </div>
 		  <div class="topnav-right">
 		  <li class="nav-item">
-		  <a class="nav-link" href="#" >Log-In</a></li>
+		  <a class="nav-link" id="list" href="#" >Log-In</a></li>
 		  <li class="nav-item">
-		  <a class="nav-link" href="#" >Sign-Up</a></li>
+		  <a class="nav-link" id="list" href="#" >Sign-Up</a></li>
 		</div>
 		</div>
 		</ul>
@@ -265,10 +273,13 @@ function closeMenu(event) {
     navMenu.classList.remove('active');
   }
 }
-  navButton.addEventListener('click', openMenu, false);
-
+navButton.addEventListener('click', openMenu, false);
 win.addEventListener('click',closeMenu, false);
-    
+</script>
+<script type="text/javascript">
+function blur(){
+document.getElementById("button").onclick=document.blur;
+}
 </script>
 </div>
 </body>
